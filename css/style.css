@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'regular';
+    src: url('../assets/font/Cousine-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'italic';
+    src: url('../assets/font/Cousine-Italic.ttf');
+}
+
+
+@font-face {
+    font-family: 'bold';
+    src: url('../assets/font/Cousine-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'bolditalic';
+    src: url('../assets/font/Cousine-BoldItalic.ttf');
+}
+
+body {
+  font-family: 'regular';
+  background-color: #8A3B00;
+  color: black;
+}
+
+.btn {
+  color: black;
+}
+
+.btn:hover {
+  color: black
+}
+
+.btn-mod {
+  font-family: 'bold';
+  font-size: 18px;
+}
+
+.btn-mod:focus {
+  text-decoration: none;
+  border-radius: 0px;
+  box-shadow: 0px;
+  outline: none;
+}
+
+.btn-mod:hover {
+  text-decoration: underline;
+  text-underline-position: from-font;
+
+}
+
+.modal-title {
+  font-family: 'bold';
+  text-underline-position: from-font;
+}
+
+.modal-cus {
+  border-radius: 0px;
+  outline: 4px groove;
+  box-shadow: 10px 10px black;
+}
+
+.search-bkg {
+  background-color: white;
+  border-radius: 0px;
+  box-shadow: ;
+  outline: 4px groove;
+}
+
+.book-shelf {
+  border-radius: 0px;
+  outline: 4px groove;
+  box-shadow: 13px 13px black;
+}
+
+.head-title {
+  font-family: 'bold';
+  text-underline-position: from-font;
+
+}
