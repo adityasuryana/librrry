@@ -1,6 +1,6 @@
-const STORAGE_KEY = "librrry";
+const STORAGE_KEY = "LIBRRRY";
 
-let librrry = [];
+let books = [];
 
 function isStorageExist() /* boolean */ {
    if(typeof(Storage) === undefined){
@@ -11,7 +11,7 @@ function isStorageExist() /* boolean */ {
 }
 
 function saveData() {
-   const parsed = JSON.stringify(librrry);
+   const parsed = JSON.stringify(books);
    localStorage.setItem(STORAGE_KEY, parsed);
    document.dispatchEvent(new Event("ondatasaved"));
 }
@@ -22,7 +22,7 @@ function loadDataFromStorage() {
    let data = JSON.parse(serializedData);
 
    if(data !== null)
-       librrry = data;
+       books = data;
 
    document.dispatchEvent(new Event("ondataloaded"));
 }
@@ -30,4 +30,52 @@ function loadDataFromStorage() {
 function updateDataToStorage() {
    if(isStorageExist())
        saveData();
+}
+
+function composeBookObject(title, author, year, isCompleted) {
+   return {
+       id: +new Date(),
+       title,
+       author,
+       year,
+       isCompleted
+   };
+}
+
+function findBook(bookId) {
+   for(book of books){
+       if(book.id === bookId)
+           return book;
+   }
+   return null;
+}
+
+
+function findBookIndex(bookId) {
+   let index = 0
+   for (book of books) {
+       if(book.id === bookId)
+           return index;
+
+       index++;
+   }
+
+   return -1;
+}
+
+function refreshDataFromBooks() {
+   const bookUncompleted = document.getElementById(UNFINISHED_BOOK_ID);
+   let bookCompleted = document.getElementById(FINISHED_BOOK_ID);
+
+
+   for(book of books){
+       const newBook = makeBook(book.title, book.author, book.year, book.isCompleted);
+       newBook[BOOK_ITEMID] = book.id;
+
+       if(book.isCompleted){
+           bookCompleted.append(newBook);
+       } else {
+           bookUncompleted.append(newBook);
+       }
+   }
 }

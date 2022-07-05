@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const submitForm /* HTMLFormElement */ = document.getElementById("inputBook");
-
+    const submitForm = document.getElementById("formBook");
     submitForm.addEventListener("submit", function (event) {
         event.preventDefault();
         addBook();
@@ -17,5 +16,5 @@ document.addEventListener("ondatasaved", () => {
 });
 
 document.addEventListener("ondataloaded", () => {
-   refreshDataFromLibrrry();
+   refreshDataFromBooks();
 });
