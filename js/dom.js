@@ -24,7 +24,7 @@ function makeBook(titleBook, authorBook, yearBook, isCompleted) {
     textContainer.append(bookTitle, bookAuthor, bookYear);
 
     const container = document.createElement("div");
-    container.classList.add("px-4");
+    container.classList.add("px-4", "mb-3");
     container.append(textContainer);
 
     if(isCompleted){
