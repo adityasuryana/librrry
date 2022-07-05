@@ -25,6 +25,12 @@ body {
   color: black;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .btn {
   color: black;
 }
@@ -79,4 +85,37 @@ body {
   font-family: 'bold';
   text-underline-position: from-font;
 
+}
+
+.check-button {
+    background: url('../assets/check-outline.svg');
+    width: 35px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+
+.trash-button{
+    background: url('../assets/trash-fill.svg');
+    width: 35px;
+    height: 40px;
+    margin-left: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button{
+    background: url('../assets/undo-ouline.svg');
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+
+.check-button:focus, .trash-button {
+    outline: none;
 }

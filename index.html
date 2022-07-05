@@ -18,49 +18,49 @@
     <main>
       <div class="m-3">
         <form class="form-inline justify-content-center">
-          <input class="form-control search-bkg mr-sm-2 w-50" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn search-bkg my-2 my-sm-0 ml-3" type="submit"><i class="fas fa-search"></i></button>
+          <input class="form-control search-bkg mr-sm-2 w-50" id="inputSearch" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn search-bkg my-2 my-sm-0 ml-3" id="searchBook" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
 
       <div class="card book-shelf mt-4 p-3">
-        <form id="inputBook">
+        <form id="formBook">
           <div class="">
-            <label class="font-weight-bold" for="">Title</label>
-            <input type="text" id="inputTitle" class="w-100" name="" value="">
+            <label class="font-weight-bold" for="inputTitle">Title</label>
+            <input type="text" id="inputTitle" class="w-100" name="" value="" required>
           </div>
 
           <div class="font-weight-bold mt-3">
-            <label class="" for="">Author</label>
-            <input type="text" id="inputAuthor" class="w-100" name="" value="">
+            <label class="inputAuthor" for="inputAuthor">Author</label>
+            <input type="text" id="inputAuthor" class="w-100" name="" value="" required>
           </div>
 
           <div class="font-weight-bold mt-3">
-            <label class="" for="">Publication Year</label>
-            <input type="number" id="inputYear" class="w-100" name="" value="">
+            <label class="inputYear" for="inputYear">Publication Year</label>
+            <input type="number" id="inputYear" class="w-100" name="" value="" required>
           </div>
 
           <div class="mt-3">
             <input type="checkbox" id="inputFinished" name="" value="">
-            <label class="font-weight-bold" for="">Finished</label>
+            <label class="font-weight-bold" for="inputFinished">Finished</label>
           </div>
-          <input class="font-weight-bold w-100 p-2" type="submit" value="Add" name="Submit" class="btn-submit">
+          <input class="font-weight-bold w-100 p-2" id="submitBook" type="submit" value="Add" name="Submit" class="btn-submit">
         </form>
 
       </div>
 
       <div class="card book-shelf mt-4 p-3">
         <div class="">
-          <h4 class="head-title"><u>start reading</u></h4>
-          <h6 class="text-center m-5 p-4">add new book to explore the world!</h6>
+          <h4 class="head-title mb-4"><u>start reading</u></h4>
+          <!--<h6 class="text-thumb text-center m-5 p-4">add new book to explore the world!</h6> -->
           <div class="" id="unfinished">
 
           </div>
         </div>
-        <div class="">
-          <h4 class="head-title "><u>finished</u></h4>
-          <h6 class="text-center m-5 p-4">add new book to explore the world!</h6>
 
+        <div class="mt-5 mb-4">
+          <h4 class="head-title mb-4"><u>finished</u></h4>
+          <!--<h6 class="text-center m-5 p-4">add new book to explore the world!</h6>-->
           <div class="" id="finished">
 
           </div>
@@ -70,19 +70,14 @@
     </main>
 
     <footer class="page-footer font-small">
-
       <div class="footer-copyright py-3">
-        <button type="button" class="btn btn-mod" data-toggle="modal" data-target="#exampleModal">
-          help
-        </button>
-        <button type="button" class="btn btn-mod" data-toggle="modal" data-target="#exampleModal">
-          about
-        </button>
+        <button type="button" class="btn btn-mod" data-toggle="modal" data-target="#exampleModal">help</button>
+        <button type="button" class="btn btn-mod" data-toggle="modal" data-target="#exampleModal">about</button>
       </div>
+    </footer>
 
-  </footer>
-  <script src="js/data.js" type="text/javascript"></script>
-  <script src="js/dom.js" type="text/javascript"></script>
-  <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/data.js" type="text/javascript"></script>
+    <script src="js/dom.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>
